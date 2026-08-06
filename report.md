@@ -73,7 +73,6 @@ I chose Track A: Code Review Assistant. Input is a code snippet, output is a def
 5. Needed context from earlier snippet → graph may help (Module 8)  
 
 ## Judge Agreement
-## Judge Agreement
 I spot-checked 5 items manually. In all 5 cases, our human judgment agreed with the model-as-judge verdict.  
 This corresponds to an agreement rate of **100%**, showing that the judge was fully reliable in this sample.
 
