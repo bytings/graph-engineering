@@ -1,0 +1,28 @@
+{
+  "id": "item-020",
+  "output": "```json\n{\n  \"defects\": [\n    {\n      \"file\": \"snippet.py\",\n      \"line\": 1,\n      \"severity\": \"high\",\n      \"rationale\": \"TypeError: cannot concatenate str and int using '+'. Requires str(5) or using a formatted string instead.\"\n    }\n  ]\n}\n```",
+  "score": {
+    "score": 0.3,
+    "detail": {
+      "deterministic": {
+        "score": 0,
+        "detail": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "tp": 0,
+          "fp": 1,
+          "fn": 1
+        }
+      },
+      "judge": {
+        "score": 1.0,
+        "detail": {
+          "score": 1.0,
+          "cited_text": "TypeError: cannot concatenate str and int using '+'. Requires str(5) or using a formatted string instead.",
+          "comments": "Correctly identifies the type error defect at line 1 with matching severity."
+        }
+      },
+      "combined": 0.3
+    }
+  }
+}

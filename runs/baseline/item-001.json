@@ -1,0 +1,28 @@
+{
+  "id": "item-001",
+  "output": "```json\n{\n  \"defects\": [\n    {\n      \"file\": \"snippet.py\",\n      \"line\": 1,\n      \"severity\": \"low\",\n      \"rationale\": \"Multiple statements (for loop and print) on a single line reduces readability; should be split into separate lines with proper indentation.\"\n    },\n    {\n      \"file\": \"snippet.py\",\n      \"line\": 1,\n      \"severity\": \"low\",\n      \"rationale\": \"Using print() directly in a loop without any logging control or purpose context may be unintended for production code; consider using logging module.\"\n    },\n    {\n      \"file\": \"snippet.py\",\n      \"line\": 1,\n      \"severity\": \"low\",\n      \"rationale\": \"range(0,10) can be simplified to range(10) since the start default is already 0, improving code clarity.\"\n    }\n  ]\n}\n```",
+  "score": {
+    "score": 0.0,
+    "detail": {
+      "deterministic": {
+        "score": 0,
+        "detail": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "tp": 0,
+          "fp": 3,
+          "fn": 1
+        }
+      },
+      "judge": {
+        "score": 0.0,
+        "detail": {
+          "score": 0.0,
+          "cited_text": "Multiple statements (for loop and print) on a single line reduces readability... Using print() directly in a loop... range(0,10) can be simplified to range(10)",
+          "comments": "The model output fails to identify the off-by-one loop defect. Instead it lists unrelated style issues (single-line statements, print usage, range simplification), none of which match the expected defect about an off-by-one error in the loop."
+        }
+      },
+      "combined": 0.0
+    }
+  }
+}

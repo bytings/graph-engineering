@@ -1,0 +1,28 @@
+{
+  "id": "item-016",
+  "output": "{\"defects\": [{\"file\": \"snippet.py\", \"line\": 2, \"severity\": \"high\", \"rationale\": \"Uses undefined variable 'names' instead of the parameter 'name', causing a NameError.\"}]}",
+  "score": {
+    "score": 0.255,
+    "detail": {
+      "deterministic": {
+        "score": 0,
+        "detail": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "tp": 0,
+          "fp": 1,
+          "fn": 1
+        }
+      },
+      "judge": {
+        "score": 0.85,
+        "detail": {
+          "score": 0.85,
+          "cited_text": "Uses undefined variable 'names' instead of the parameter 'name', causing a NameError.",
+          "comments": "Model correctly identifies the undefined variable defect at line 2, matching the expected defect's core issue. Severity differs (high vs medium) but the defect identification itself is accurate."
+        }
+      },
+      "combined": 0.255
+    }
+  }
+}

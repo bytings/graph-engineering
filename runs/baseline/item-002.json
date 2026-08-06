@@ -1,0 +1,28 @@
+{
+  "id": "item-002",
+  "output": "```json\n{\n  \"defects\": [\n    {\n      \"file\": \"snippet.py\",\n      \"line\": 1,\n      \"severity\": \"high\",\n      \"rationale\": \"Function is named 'add' but performs subtraction (a-b) instead of addition (a+b), which is a logic error that will produce incorrect results wherever addition is expected.\"\n    }\n  ]\n}\n```",
+  "score": {
+    "score": 0.3,
+    "detail": {
+      "deterministic": {
+        "score": 0,
+        "detail": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "tp": 0,
+          "fp": 1,
+          "fn": 1
+        }
+      },
+      "judge": {
+        "score": 1.0,
+        "detail": {
+          "score": 1.0,
+          "cited_text": "Function is named 'add' but performs subtraction (a-b) instead of addition (a+b)",
+          "comments": "Correctly identifies wrong operator defect at line 1 with high severity, matching expected defect."
+        }
+      },
+      "combined": 0.3
+    }
+  }
+}

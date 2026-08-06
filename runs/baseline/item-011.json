@@ -1,0 +1,28 @@
+{
+  "id": "item-011",
+  "output": "```json\n{\n  \"defects\": [\n    {\n      \"file\": \"snippet.py\",\n      \"line\": 3,\n      \"severity\": \"high\",\n      \"rationale\": \"Recursive call uses factorial(n) instead of factorial(n-1), causing infinite recursion and eventual stack overflow/RecursionError for any n != 0.\"\n    },\n    {\n      \"file\": \"snippet.py\",\n      \"line\": 1,\n      \"severity\": \"low\",\n      \"rationale\": \"No input validation for negative numbers or non-integer types, which would cause infinite recursion or incorrect behavior.\"\n    }\n  ]\n}\n```",
+  "score": {
+    "score": 0.3,
+    "detail": {
+      "deterministic": {
+        "score": 0,
+        "detail": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "tp": 0,
+          "fp": 2,
+          "fn": 1
+        }
+      },
+      "judge": {
+        "score": 1.0,
+        "detail": {
+          "score": 1.0,
+          "cited_text": "Recursive call uses factorial(n) instead of factorial(n-1), causing infinite recursion and eventual stack overflow/RecursionError for any n != 0.",
+          "comments": "Model correctly identified the expected defect (infinite recursion at line 3, high severity) with accurate rationale. Additional low-severity defect is extra but doesn't detract from correct identification of the expected defect."
+        }
+      },
+      "combined": 0.3
+    }
+  }
+}

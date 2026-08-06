@@ -1,0 +1,28 @@
+{
+  "id": "item-008",
+  "output": "```json\n{\n  \"defects\": [\n    {\n      \"file\": \"snippet.py\",\n      \"line\": 2,\n      \"severity\": \"high\",\n      \"rationale\": \"The math module does not have a function named 'sine'; the correct function is 'math.sin'. This will raise an AttributeError at runtime.\"\n    }\n  ]\n}\n```",
+  "score": {
+    "score": 0.255,
+    "detail": {
+      "deterministic": {
+        "score": 0,
+        "detail": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "tp": 0,
+          "fp": 1,
+          "fn": 1
+        }
+      },
+      "judge": {
+        "score": 0.85,
+        "detail": {
+          "score": 0.85,
+          "cited_text": "line 2, severity high, rationale: math module does not have a function named 'sine'; correct function is 'math.sin'",
+          "comments": "Correctly identifies wrong attribute defect on line 2; severity differs (high vs medium) but core defect matches."
+        }
+      },
+      "combined": 0.255
+    }
+  }
+}

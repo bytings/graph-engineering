@@ -1,0 +1,28 @@
+{
+  "id": "item-018",
+  "output": "```json\n{\n  \"defects\": [\n    {\n      \"file\": \"snippet.py\",\n      \"line\": 2,\n      \"severity\": \"high\",\n      \"rationale\": \"Variable 'j' is undefined; loop variable 'i' is not used, causing a NameError at runtime.\"\n    }\n  ]\n}\n```",
+  "score": {
+    "score": 0.3,
+    "detail": {
+      "deterministic": {
+        "score": 0,
+        "detail": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "tp": 0,
+          "fp": 1,
+          "fn": 1
+        }
+      },
+      "judge": {
+        "score": 1.0,
+        "detail": {
+          "score": 1.0,
+          "cited_text": "Variable 'j' is undefined; loop variable 'i' is not used, causing a NameError at runtime.",
+          "comments": "Model correctly identifies undefined variable defect at line 2 with matching severity."
+        }
+      },
+      "combined": 0.3
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{"id": "item-001", "input": "for i in range(0,10): print(i)", "expected": {"defects": [{"line":1,"severity":"medium","rationale":"Off-by-one loop"}]}, "notes": "seeded off-by-one in loop bound"}
+{"id": "item-002", "input": "def add(a,b): return a-b", "expected": {"defects": [{"line":1,"severity":"high","rationale":"Wrong operator"}]}, "notes": "seeded wrong operator"}
+{"id": "item-003", "input": "x = [1,2,3]\nprint(x[3])", "expected": {"defects": [{"line":2,"severity":"high","rationale":"Index out of range"}]}, "notes": "seeded index error"}
+{"id": "item-004", "input": "def is_even(n):\n    return n%2==0\nprint(is_even('a'))", "expected": {"defects": [{"line":3,"severity":"high","rationale":"Type error"}]}, "notes": "seeded wrong type"}
+{"id": "item-005", "input": "x = [1,2,3]\nprint(sum(x)/len(y))", "expected": {"defects": [{"line":2,"severity":"high","rationale":"Undefined variable"}]}, "notes": "seeded wrong variable"}
+{"id": "item-006", "input": "def multiply(a,b,c):\n    return a*b\nprint(multiply(2,3))", "expected": {"defects": [{"line":3,"severity":"medium","rationale":"Missing argument"}]}, "notes": "seeded wrong function signature"}
+{"id": "item-007", "input": "for i in range(3):\n    print(i)\nprint(i)", "expected": {"defects": [{"line":3,"severity":"low","rationale":"Variable scope leak"}]}, "notes": "seeded variable scope leak"}
+{"id": "item-008", "input": "import math\nprint(math.sine(0))", "expected": {"defects": [{"line":2,"severity":"medium","rationale":"Wrong attribute"}]}, "notes": "seeded wrong attribute"}
+{"id": "item-009", "input": "def foo():\n    return\nprint(foo()+1)", "expected": {"defects": [{"line":3,"severity":"medium","rationale":"NoneType arithmetic"}]}, "notes": "seeded NoneType arithmetic"}
+{"id": "item-010", "input": "x = (1,2,3)\nx[0] = 5", "expected": {"defects": [{"line":2,"severity":"high","rationale":"Tuple immutability"}]}, "notes": "seeded immutability error"}
+{"id": "item-011", "input": "def factorial(n):\n    if n==0: return 1\n    else: return n*factorial(n)", "expected": {"defects": [{"line":3,"severity":"high","rationale":"Infinite recursion"}]}, "notes": "seeded recursion error"}
+{"id": "item-012", "input": "open('nonexistent.txt')", "expected": {"defects": [{"line":1,"severity":"medium","rationale":"File not found"}]}, "notes": "seeded missing file"}
+{"id": "item-013", "input": "def square(x):\n    return x*x\nprint(square())", "expected": {"defects": [{"line":3,"severity":"high","rationale":"Missing argument"}]}, "notes": "seeded missing argument"}
+{"id": "item-014", "input": "numbers = [1,2,3]\nnumbers.remove(4)", "expected": {"defects": [{"line":2,"severity":"medium","rationale":"Invalid remove"}]}, "notes": "seeded invalid remove"}
+{"id": "item-015", "input": "import json\njson.loads('{bad json}')", "expected": {"defects": [{"line":2,"severity":"high","rationale":"Invalid JSON"}]}, "notes": "seeded malformed JSON"}
+{"id": "item-016", "input": "def greet(name):\n    return 'Hello ' + names", "expected": {"defects": [{"line":2,"severity":"medium","rationale":"Undefined variable"}]}, "notes": "seeded typo in variable"}
+{"id": "item-017", "input": "x = {'a':1}\nprint(x['b'])", "expected": {"defects": [{"line":2,"severity":"high","rationale":"Missing key"}]}, "notes": "seeded missing key"}
+{"id": "item-018", "input": "for i in range(5):\n    print(j)", "expected": {"defects": [{"line":2,"severity":"high","rationale":"Undefined variable"}]}, "notes": "seeded undefined variable"}
+{"id": "item-019", "input": "def divide(a,b): return a/b\nprint(divide(10,0))", "expected": {"defects": [{"line":2,"severity":"high","rationale":"Division by zero"}]}, "notes": "seeded division by zero"}
+{"id": "item-020", "input": "print('Hello' + 5)", "expected": {"defects": [{"line":1,"severity":"high","rationale":"Type error"}]}, "notes": "seeded type mismatch"}

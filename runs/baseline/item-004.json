@@ -1,0 +1,28 @@
+{
+  "id": "item-004",
+  "output": "```json\n{\n  \"defects\": [\n    {\n      \"file\": \"snippet.py\",\n      \"line\": 3,\n      \"severity\": \"high\",\n      \"rationale\": \"Calling is_even('a') applies the modulo operator to a string, causing a TypeError since '%' is not supported between str and int in this context.\"\n    },\n    {\n      \"file\": \"snippet.py\",\n      \"line\": 1,\n      \"severity\": \"low\",\n      \"rationale\": \"Function lacks input validation/type checking, so non-integer inputs cause runtime errors instead of a clear, handled exception.\"\n    }\n  ]\n}\n```",
+  "score": {
+    "score": 0.3,
+    "detail": {
+      "deterministic": {
+        "score": 0,
+        "detail": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "tp": 0,
+          "fp": 2,
+          "fn": 1
+        }
+      },
+      "judge": {
+        "score": 1.0,
+        "detail": {
+          "score": 1.0,
+          "cited_text": "Calling is_even('a') applies the modulo operator to a string, causing a TypeError since '%' is not supported between str and int in this context.",
+          "comments": "Model correctly identifies the expected defect (line 3, high severity, TypeError) with accurate rationale. Additional defect noted is extra but doesn't detract from correctness."
+        }
+      },
+      "combined": 0.3
+    }
+  }
+}

@@ -1,0 +1,5 @@
+{"id": "dev-001", "input": "def multiply(a,b): return a+b", "expected": {"defects": [{"line":1,"severity":"high","rationale":"Incorrect operator, should be multiplication"}]}, "notes": "operator error"}
+{"id": "dev-002", "input": "for i in range(5): print(i*2)", "expected": {"defects": []}, "notes": "clean example"}
+{"id": "dev-003", "input": "numbers = [1,2,3]\nprint(numbers[5])", "expected": {"defects": [{"line":2,"severity":"high","rationale":"Index out of range, valid indices are 0–2"}]}, "notes": "index error"}
+{"id": "dev-004", "input": "def divide(a,b): return a/b\nprint(divide(10,0))", "expected": {"defects": [{"line":2,"severity":"high","rationale":"Division by zero error"}]}, "notes": "seeded division by zero"}
+{"id": "dev-005", "input": "value = '10'\nprint(value+5)", "expected": {"defects": [{"line":2,"severity":"medium","rationale":"Type error, cannot add string and int"}]}, "notes": "type mismatch"}

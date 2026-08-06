@@ -1,0 +1,28 @@
+{
+  "id": "item-014",
+  "output": "```json\n{\n  \"defects\": [\n    {\n      \"file\": \"snippet.py\",\n      \"line\": 2,\n      \"severity\": \"high\",\n      \"rationale\": \"Calling remove(4) on a list that does not contain the value 4 raises a ValueError at runtime, causing the program to crash unless handled.\"\n    }\n  ]\n}\n```",
+  "score": {
+    "score": 0.27,
+    "detail": {
+      "deterministic": {
+        "score": 0,
+        "detail": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "tp": 0,
+          "fp": 1,
+          "fn": 1
+        }
+      },
+      "judge": {
+        "score": 0.9,
+        "detail": {
+          "score": 0.9,
+          "cited_text": "\"line\": 2, \"rationale\": \"Calling remove(4) on a list that does not contain the value 4 raises a ValueError\"",
+          "comments": "Correct line and matching defect (invalid remove), severity differs (high vs medium) but core defect identified correctly."
+        }
+      },
+      "combined": 0.27
+    }
+  }
+}

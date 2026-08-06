@@ -1,0 +1,28 @@
+{
+  "id": "item-005",
+  "output": "```json\n{\n  \"defects\": [\n    {\n      \"file\": \"snippet.py\",\n      \"line\": 2,\n      \"severity\": \"high\",\n      \"rationale\": \"NameError: 'y' is undefined; likely should be 'x'.\"\n    },\n    {\n      \"file\": \"snippet.py\",\n      \"line\": 2,\n      \"severity\": \"low\",\n      \"rationale\": \"No check for empty list before division, which could cause ZeroDivisionError if len is 0.\"\n    }\n  ]\n}\n```",
+  "score": {
+    "score": 0.3,
+    "detail": {
+      "deterministic": {
+        "score": 0,
+        "detail": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "tp": 0,
+          "fp": 2,
+          "fn": 1
+        }
+      },
+      "judge": {
+        "score": 1.0,
+        "detail": {
+          "score": 1.0,
+          "cited_text": "\"rationale\": \"NameError: 'y' is undefined; likely should be 'x'.\"",
+          "comments": "Model correctly identifies the expected defect (undefined variable on line 2, high severity), plus an extra valid observation."
+        }
+      },
+      "combined": 0.3
+    }
+  }
+}

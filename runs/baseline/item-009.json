@@ -1,0 +1,28 @@
+{
+  "id": "item-009",
+  "output": "```json\n{\n  \"defects\": [\n    {\n      \"file\": \"snippet.py\",\n      \"line\": 3,\n      \"severity\": \"high\",\n      \"rationale\": \"foo() returns None (implicit due to bare 'return'), and adding 1 to None raises a TypeError.\"\n    },\n    {\n      \"file\": \"snippet.py\",\n      \"line\": 2,\n      \"severity\": \"low\",\n      \"rationale\": \"The function 'foo' returns nothing meaningful; if a value was intended to be returned, it's missing.\"\n    }\n  ]\n}\n```",
+  "score": {
+    "score": 0.27,
+    "detail": {
+      "deterministic": {
+        "score": 0,
+        "detail": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "tp": 0,
+          "fp": 2,
+          "fn": 1
+        }
+      },
+      "judge": {
+        "score": 0.9,
+        "detail": {
+          "score": 0.9,
+          "cited_text": "line 3 ... TypeError ... None + 1",
+          "comments": "Model correctly identifies NoneType arithmetic defect at line 3, matching expected defect. Severity differs (high vs medium) but core defect identification is correct. Extra defect noted doesn't detract from match."
+        }
+      },
+      "combined": 0.27
+    }
+  }
+}
